@@ -9,57 +9,59 @@ This is the backend component of a food delivery application developed using Nod
 
 ## Installation
 
-1. **Clone the repository:**
+1.  **Clone the repository:**
 
-   ```bash
-   git clone https://github.com/your-username/food-delivery-backend.git
-   ```
+    ```bash
+    git clone https://github.com/your-username/food-delivery-backend.git
+    ```
 
-2. **Install dependencies:**
+2.  **Install dependencies:**
 
-   ```bash
-   cd food-delivery-backend
-   npm install
-   ```
+    ```bash
+    cd food-delivery-backend
+    npm install
+    ```
 
-3. **Set up environment variables:**
+3.  **Set up environment variables:**
 
-   Create a `.env` file in the root directory and configure the following environment variables:
-            a.
-            ```PORT=3000
-            DB_HOST=localhost
-            DB_USER=your_username
-            DB_PASSWORD=your_password
-            ```
-            b. Go to src/database/connection.js and change:
+    Create a `.env` file in the root directory and configure the following environment variables:
+             a. paste this in .env:
 
-            ```const client = new Client({
-               connectionString:process.env.DATABASE_URL
-            })
-            ```
-           with:
+             ```plaintext
+             PORT=3000
+             DB_HOST=localhost
+             DB_USER=your_username
+             DB_PASSWORD=your_password
+             ```
 
-            ```const client = new Client({
-                host:process.env.DB_HOST,
-                port:5433,
-                database:'postgres',
-                user:DB_USER,
-                password:DB_PASSWORD
-            })
-            ```
+             b. Go to src/database/connection.js and change:
 
-            or
+             ```plaintext
+             const {Client} = require("pg")
+             require("dotenv").config()
 
-            ```
-            PORT=3000_
-            DATABASE_URL=your_cloud_db_url
-            ```
+             const client = new Client({
+                 host:process.env.DB_HOST,
+                 port:5433,
+                 database:'postgres',
+                 user:DB_USER,
+                 password:DB_PASSWORD
+             })
+             module.exports = client
+             ```
 
-4. **Start the server:**
+             or
 
-   ```bash
-   npm start
-   ```
+             ```plaintext
+             PORT=3000_
+             DATABASE_URL=your_cloud_db_url
+             ```
+
+4.  **Start the server:**
+
+    ```bash
+    npm start
+    ```
 
 ## API Documentation
 
