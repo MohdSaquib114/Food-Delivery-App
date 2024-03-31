@@ -15,4 +15,4 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(apiDocument));
 
 const PORT = process.env.PORT || 4040
 
-app.listen(PORT)
+app.listen(PORT,()=>console.log(`Server is running on Port number ${PORT}`))

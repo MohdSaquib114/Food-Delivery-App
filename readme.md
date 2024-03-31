@@ -25,23 +25,23 @@ This is the backend component of a food delivery application developed using Nod
 3. **Set up environment variables:**
 
    Create a `.env` file in the root directory and configure the following environment variables:
-1.
-   ```plaintext
-   PORT=3000
-   DB_HOST=localhost
-   DB_USER=your_username
-   DB_PASSWORD=your_password
-   
-   ```
-2. Go to src/database/connection.js and change:
-```const client = new Client({
-      host:process.env.DB_HOST,
-    port:5433,
-    database:'postgres',
-    user:DB_USER,
-    password:DB_PASSWORD
-})
-```
+            a.
+            ```plaintext
+            PORT=3000
+            DB_HOST=localhost
+            DB_USER=your_username
+            DB_PASSWORD=your_password
+            
+            ```
+            b. Go to src/database/connection.js and change:
+            ```const client = new Client({
+                host:process.env.DB_HOST,
+                port:5433,
+                database:'postgres',
+                user:DB_USER,
+                password:DB_PASSWORD
+            })
+            ```
 
    or
 

@@ -7,7 +7,7 @@ async function dbMigration(){
         await client.query(createItemTable)
         await client.query(createOrganizationTable)
         await client.query(createPricingTable)
-       
+       console.log("Database connected")
       
     }catch(e){
         console.log(e)
