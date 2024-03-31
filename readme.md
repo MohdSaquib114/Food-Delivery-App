@@ -31,9 +31,13 @@ This is the backend component of a food delivery application developed using Nod
             DB_HOST=localhost
             DB_USER=your_username
             DB_PASSWORD=your_password
-            
             ```
             b. Go to src/database/connection.js and change:
+            ``` const client = new Client({
+               connectionString:process.env.DATABASE_URL
+               })
+            ```
+           with:
             ```const client = new Client({
                 host:process.env.DB_HOST,
                 port:5433,
@@ -43,12 +47,12 @@ This is the backend component of a food delivery application developed using Nod
             })
             ```
 
-   or
+            or
 
-   ```plaintext
-   PORT=3000_
-   DATABASE_URL=your_cloud_db_url
-   ```
+            ```plaintext
+            PORT=3000_
+            DATABASE_URL=your_cloud_db_url
+            ```
 
 4. **Start the server:**
 
