@@ -5,41 +5,56 @@ This is the backend component of a food delivery application developed using Nod
 ## Features
 
 - Dynamic pricing module to calculate delivery costs based on various factors such as distance and item type.
-- APIs for managing users, orders, and pricing structures.
 - Integration with PostgreSQL database for data storage.
 
 ## Installation
 
 1. **Clone the repository:**
 
-    ```bash
-    git clone https://github.com/your-username/food-delivery-backend.git
-    ```
+   ```bash
+   git clone https://github.com/your-username/food-delivery-backend.git
+   ```
 
 2. **Install dependencies:**
 
-    ```bash
-    cd food-delivery-backend
-    npm install
-    ```
+   ```bash
+   cd food-delivery-backend
+   npm install
+   ```
 
 3. **Set up environment variables:**
 
-    Create a `.env` file in the root directory and configure the following environment variables:
+   Create a `.env` file in the root directory and configure the following environment variables:
+1.
+   ```plaintext
+   PORT=3000
+   DB_HOST=localhost
+   DB_USER=your_username
+   DB_PASSWORD=your_password
+   
+   ```
+2. Go to src/database/connection.js and change:
+```const client = new Client({
+      host:process.env.DB_HOST,
+    port:5433,
+    database:'postgres',
+    user:DB_USER,
+    password:DB_PASSWORD
+})
+```
 
-    ```plaintext
-    PORT=3000
-    DB_HOST=localhost
-    DB_USER=your_username
-    DB_PASSWORD=your_password
-    DB_NAME=food_delivery_db
-    ```
+   or
+
+   ```plaintext
+   PORT=3000_
+   DATABASE_URL=your_cloud_db_url
+   ```
 
 4. **Start the server:**
 
-    ```bash
-    npm start
-    ```
+   ```bash
+   npm start
+   ```
 
 ## API Documentation
 
