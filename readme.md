@@ -26,36 +26,36 @@ This is the backend component of a food delivery application developed using Nod
 
     Create a `.env` file in the root directory and configure the following environment variables:
      a. paste this in .env:
+      ```plaintext
+      PORT=3000
+      DB_HOST=localhost
+      DB_USER=your_username
+      DB_PASSWORD=your_password
+      ```
 
-             ```plaintext
-             PORT=3000
-             DB_HOST=localhost
-             DB_USER=your_username
-             DB_PASSWORD=your_password
-             ```
 
      b. Go to src/database/connection.js and change:
 
-             ```plaintext
-             const {Client} = require("pg")
-             require("dotenv").config()
+       ```plaintext
+       const {Client} = require("pg")
+       require ("dotenv").config()
 
-             const client = new Client({
-                 host:process.env.DB_HOST,
-                 port:5433,
-                 database:'postgres',
-                 user:DB_USER,
-                 password:DB_PASSWORD
-             })
-             module.exports = client
-             ```
+       const client = new Client({
+       host:process.env.DB_HOST,
+       port:5433,
+       database:'postgres',
+       user:DB_USER,
+       password:DB_PASSWORD
+       })
+       module.exports = client
+       ```
 
       or
 
-             ```plaintext
-             PORT=3000_
-             DATABASE_URL=your_cloud_db_url
-             ```
+       ```plaintext
+       PORT=3000_
+       DATABASE_URL=your_cloud_db_url
+       ```
 
 4.  **Start the server:**
 
