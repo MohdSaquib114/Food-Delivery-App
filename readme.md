@@ -26,18 +26,19 @@ This is the backend component of a food delivery application developed using Nod
 
    Create a `.env` file in the root directory and configure the following environment variables:
             a.
-            ```plaintext
-            PORT=3000
+            ```PORT=3000
             DB_HOST=localhost
             DB_USER=your_username
             DB_PASSWORD=your_password
             ```
             b. Go to src/database/connection.js and change:
-            ``` const client = new Client({
+
+            ```const client = new Client({
                connectionString:process.env.DATABASE_URL
-               })
+            })
             ```
            with:
+
             ```const client = new Client({
                 host:process.env.DB_HOST,
                 port:5433,
@@ -49,7 +50,7 @@ This is the backend component of a food delivery application developed using Nod
 
             or
 
-            ```plaintext
+            ```
             PORT=3000_
             DATABASE_URL=your_cloud_db_url
             ```
