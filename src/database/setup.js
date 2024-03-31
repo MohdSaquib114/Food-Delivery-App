@@ -1,5 +1,5 @@
 const client = require("./connection")
-const {createItemTable,createOrganizationTable,createPricingTable} = require("./query")
+const {createItemTable,createOrganizationTable,createPricingTable} = require("./models")
 
 async function dbMigration(){
     try{
