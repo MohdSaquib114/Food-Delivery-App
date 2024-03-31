@@ -3,7 +3,7 @@ const dbMigration = require("./database/setup")
 const client = require("./database/connection")
 const route = require("./Routes/route")
 const swaggerUi = require('swagger-ui-express');
-const apiDocument = require("./api-document/swagger.json")
+const apiDocument = require("./api-document/api.json")
 require("dotenv").config()
 const app =  express()
 
