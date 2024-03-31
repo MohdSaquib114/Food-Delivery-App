@@ -25,7 +25,7 @@ This is the backend component of a food delivery application developed using Nod
 3.  **Set up environment variables:**
 
     Create a `.env` file in the root directory and configure the following environment variables:
-             a. paste this in .env:
+     a. paste this in .env:
 
              ```plaintext
              PORT=3000
@@ -34,7 +34,7 @@ This is the backend component of a food delivery application developed using Nod
              DB_PASSWORD=your_password
              ```
 
-             b. Go to src/database/connection.js and change:
+     b. Go to src/database/connection.js and change:
 
              ```plaintext
              const {Client} = require("pg")
@@ -50,7 +50,7 @@ This is the backend component of a food delivery application developed using Nod
              module.exports = client
              ```
 
-             or
+      or
 
              ```plaintext
              PORT=3000_
