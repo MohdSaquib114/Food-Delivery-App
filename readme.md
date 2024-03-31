@@ -65,7 +65,7 @@ This is the backend component of a food delivery application developed using Nod
 
 ## API Documentation
 
-The API documentation is generated using Swagger UI and is available at `/api-docs` endpoint. You can access it in your browser at [http://localhost:3000/api-docs](http://localhost:3000/api-docs).
+The API documentation is generated using Swagger UI and is available at `/api-docs` endpoint. You can access it in your browser at [https://food-delivery-app-1cq2.onrender.com/api-docs](https://food-delivery-app-1cq2.onrender.com/api-docs).
 
 ## Database Schema
 
