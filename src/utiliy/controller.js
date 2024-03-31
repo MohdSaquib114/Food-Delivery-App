@@ -50,7 +50,7 @@ async function postItem(req,res){
 const {type,description} = req.body
         const items = await client.query(post_item,[type,description])
         res.status(200).json({
-            message:"Posted"
+            description:"Successful operation"
         }  )
     }catch(e){
         
@@ -65,7 +65,7 @@ async function updateItem(req,res){
         const {id,type,description} = req.body
         await client.query(update_item,[type,description,id])
         res.status(200).json({
-            message:"updated"
+            description: "Successful operation"
         }  )
     }catch(e){
         
@@ -93,7 +93,7 @@ async function postOrganization(req,res){
   
         const items = await client.query(post_organization,[req.body.name])
         res.status(200).json({
-           message:"Posted"
+            description:"Successful operation"
         }  )
     }catch(e){
         
@@ -109,7 +109,7 @@ async function postPrice(req,res){
       const km_price_cent = dollarsToCents(km_price)
         const items = await client.query(post_price,[organization_id,item_id,zone,base_distance_in_km,km_price_cent,fix_price])
         res.status(200).json({
-           message:"Posted"
+            description:"Successful operation"
         }  )
     }catch(e){
         
@@ -124,7 +124,7 @@ async function putPrice(req,res){
       const km_price_cent = dollarsToCents(km_price)
         const items = await client.query(put_price,[organization_id,item_id,zone,base_distance_in_km,km_price_cent,fix_price])
         res.status(200).json({
-           message:"Posted"
+            description:"Successful operation"
         }  )
     }catch(e){
         

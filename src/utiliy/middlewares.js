@@ -1,4 +1,4 @@
-const {pricePayLoadSchema,itemGetReqSchemam, itemPostReqSchema, orgPostSchema, pricingSchema} = require("./schema")
+const {pricePayLoadSchema,itemSchema, itemPostSchema, orgPostSchema, pricingSchema} = require("./schema")
 
 
 function pricePayLoadChecker(req,res,next){
@@ -24,7 +24,7 @@ function pricePayLoadChecker(req,res,next){
 function itemPutMiddleware (req,res,next){
     try{
 
-        const result = itemGetReqSchema.safeParse(req.body)
+        const result = itemPostSchema.safeParse(req.body)
         if(!result.success){
             res.status(400).json({
                 error:result.error
@@ -45,7 +45,9 @@ function itemPostMiddleware (req,res,next){
     try{
 
         const result = itemPostReqSchema.safeParse(req.body)
+       
         if(!result.success){
+           
             res.status(400).json({
                 error:result.error
             })

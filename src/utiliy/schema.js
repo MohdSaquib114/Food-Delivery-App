@@ -7,12 +7,12 @@ const pricePayLoadSchema = zod.object({
     item_type:zod.string()
 })
 
-const itemGetReqSchema = zod.object({
+const itemSchema = zod.object({
     id:zod.number(),
     type:zod.string(),
     description:zod.string()
 })
-const itemPostReqSchema = zod.object({
+const itemPostSchema = zod.object({
     
     type:zod.string(),
     description:zod.string()
@@ -32,8 +32,8 @@ const pricingSchema = zod.object({
 
 module.exports = {
     pricePayLoadSchema,
-    itemGetReqSchema,
-    itemPostReqSchema,
+    itemSchema,
+    itemPostSchema,
     orgPostSchema,
     pricingSchema
 }

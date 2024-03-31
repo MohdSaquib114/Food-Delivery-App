@@ -39,7 +39,7 @@ const post_price = `
 INSERT INTO pricing (organization_id,item_id,zone,base_distance_in_km,km_price,fix_price) VALUES ($1,$2,$3,$4,$5,$6);
 `
 const put_price = `
-UPDATE  pricing SET zone=$3,base_distance_in_km=$4,km_price=$6,fix_price=$6 WHERE organization_id=$1 AND item_id=$2  AND zone=$3 ;
+UPDATE  pricing SET base_distance_in_km=$4,km_price=$6,fix_price=$6 WHERE organization_id=$1 AND item_id=$2  AND zone=$3 ;
 `
 
 module.exports = {
